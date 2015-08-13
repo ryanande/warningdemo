@@ -145,7 +145,7 @@ publish/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
-# TODO: Comment the next line if you want to checkin your web deploy settings 
+# TODO: Comment the next line if you want to checkin your web deploy settings
 # but database connection strings (with potential passwords) will be unencrypted
 *.pubxml
 *.publishproj
@@ -211,20 +211,8 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 
-tools/roundhouse/output/
-
-*.orig
-
-.init.ps1
-
-
-#Migration Files
-99999.LOCALDEV.AddPermissionToLocalUser.sql
-*GITIGNORE*.sql
-#DevExpress generated files
-UploadTemp/
-MMM.MES/Services/MMM.MES.Services/App_Data/nsb_*.txt
 
 .DS_Store
 ._.DS_Store
-nsb_log*.txt
+
+.idea/
