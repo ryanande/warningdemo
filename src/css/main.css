@@ -1,0 +1,30 @@
+
+
+div small.error {
+   color: #B94A48;
+}
+
+
+input .datepicker {
+
+}
+
+.has-error .form-control, .has-warning .form-control {
+   border-width: 2px;
+}
+
+.has-warning .form-control {
+   border-color: #FAF3D1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
