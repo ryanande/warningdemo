@@ -1,2 +1,2 @@
 # warningdemo
-simple warning demp
+simple warning demo
