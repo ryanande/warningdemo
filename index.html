@@ -3,116 +3,121 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>Example One</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Warning Validation Demo</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-
-            </div>
-            <!--/.navbar-collapse -->
-        </div>
-    </nav>
-
-
+<nav class="navbar navbar-default" role="navigation">
     <div class="container">
-
-        <div id="formDiv" class="row">
-            <div class="col-md-6">
-                <form>
-                    <div id="errorDiv" class="alert alert-danger hidden" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <strong>Validation Errors</strong>
-                        <ul id="errorList">
-                        </ul>
-                    </div>
-
-                    <fieldset>
-                        <legend>Input Form</legend>
-                        <div class="form-group" id="producedQuantityGrp">
-                            <label for="producedQuantity">Produced Quantity (M2) <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control required" id="producedQuantity" required>
-                        </div>
-                        <div class="form-group" id="startDateGrp">
-                            <label for="startDate">Start DateTime</label>
-                            <input type="text" class="form-control datepicker" id="startDate">
-                        </div>
-                        <div class="form-group" id="batchNumberGrp">
-                            <label for="batchNumber">Batch Nbr <span class="text-danger">*</span> </label>
-                            <input type="text" class="form-control required" id="batchNumber" required>
-                        </div>
-                        <button type="button" class="btn btn-primary" data-nav="1">Submit</button>
-                    </fieldset>
-                </form>
-            </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Warning Validation Demo</a>
         </div>
-        <div id="warningDiv" class="row hidden">
-            <div class="col-md-6">
-                <div class="alert alert-warning" role="alert">
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Example One</a></li>
+                <li><a href="index2.html">Example Two</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
 
-                    <strong>Warning!</strong>
-                    The following <i>concerns</i> have been identified with the data you are submitting;
-                    <br /><br />
-                    <ul id="warningList">
+
+<div class="container">
+
+    <div id="formDiv" class="row">
+        <div class="col-md-6">
+            <form>
+                <div id="errorDiv" class="alert alert-danger hidden" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <strong>Validation Errors</strong>
+                    <ul id="errorList">
                     </ul>
-                    <br />
-                    If you wish to ignore the warnings, provide a comment below and click Submit.<br />
-                    Otherwise, click Back to correct the issues listed above.
-
                 </div>
 
-                <form>
-
-                    <div class="form-group">
-                        <label for="warningComment">Comment</label>
-                        <textarea class="form-control" rows="3" id="warningComment" placeholder="A comment is required."></textarea>
+                <fieldset>
+                    <legend>Example One</legend>
+                    <div class="form-group" id="producedQuantityGrp">
+                        <label for="producedQuantity">Produced Quantity (M2) <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control required" id="producedQuantity" required>
                     </div>
-                    <button type="button" class="btn btn-default" data-nav="0">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back
-                    </button>
-                    <button type="button" class="btn btn-primary" data-nav="2">Submit (ignore warnings)</button>
-                </form>
-            </div>
+                    <div class="form-group" id="startDateGrp">
+                        <label for="startDate">Start DateTime</label>
+                        <input type="text" class="form-control datepicker" id="startDate">
+                    </div>
+                    <div class="form-group" id="batchNumberGrp">
+                        <label for="batchNumber">Batch Nbr <span class="text-danger">*</span> </label>
+                        <input type="text" class="form-control required" id="batchNumber" required>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-nav="1">Submit</button>
+                </fieldset>
+            </form>
         </div>
+    </div>
+    <div id="warningDiv" class="row hidden">
+        <div class="col-md-6">
+            <div class="alert alert-warning" role="alert">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                <strong>Warning!</strong>
+                The following <i>concerns</i> have been identified with the data you are submitting;
+                <br/><br/>
+                <ul id="warningList">
+                </ul>
+                <br/>
+                If you wish to ignore the warnings, provide a comment below and click Submit.<br/>
+                Otherwise, click Back to correct the issues listed above.
 
-        <div id="successDiv" class="row hidden">
-            <div class="col-md-6">
-                Success!
             </div>
+
+            <form>
+
+                <div class="form-group">
+                    <label for="warningComment">Comment</label>
+                    <textarea class="form-control" rows="3" id="warningComment"
+                              placeholder="A comment is required."></textarea>
+                </div>
+                <button type="button" class="btn btn-default" data-nav="0">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back
+                </button>
+                <button type="button" class="btn btn-primary" data-nav="2">Submit (ignore warnings)</button>
+            </form>
         </div>
     </div>
 
-    <hr>
-
-    <footer>
-        <p>&nbsp; &copy; Headspring 2015</p>
-    </footer>
+    <div id="successDiv" class="row hidden">
+        <div class="col-md-6">
+            Success!
+        </div>
     </div>
-    <!-- /container -->
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="js/main.js"></script>
+</div>
+
+<hr>
+
+<footer>
+    <p>&nbsp; &copy; Headspring 2015</p>
+</footer>
+</div>
+<!-- /container -->
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
