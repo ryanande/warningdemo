@@ -34,6 +34,10 @@ function click(navValue) {
             $(formDiv).removeClass(hiddenClass);
             $(warningCommentDiv).addClass(hiddenClass);
 
+            if($("#warningList").size() > 0){
+                $(warningDiv).removeClass(hiddenClass);
+            }
+
             break;
         case 1 :
             if(!isValid())
@@ -69,7 +73,7 @@ function click(navValue) {
                 higlightFields();
             }
             else{
-                $(errorDiv  + ", " + warningDiv + ", " + formDiv).addClass(hiddenClass);
+                $(errorDiv  + ", "  + ", " + formDiv).addClass(hiddenClass);
                 $(successDiv).removeClass(hiddenClass);
             }
             break;
