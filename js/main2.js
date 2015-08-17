@@ -20,7 +20,12 @@ var validationRules = [
 
 function click(navValue) {
 
-    var formDiv = "#formDiv", warningDiv = "#warningDiv", successDiv = "#successDiv", errorDiv = "#errorDiv";
+    var formDiv = "#formDiv",
+        successDiv = "#successDiv",
+        errorDiv = "#errorDiv",
+        warningDiv = "#warningDiv",
+        warningCommentDiv = "#warningCommentDiv";
+
     var hiddenClass = "hidden";
 
     switch(navValue){
@@ -36,31 +41,41 @@ function click(navValue) {
                 // if there are errors
                 if(getErrorCount(true) > 0)
                 {
-                    bindMessages(true, "errorList");
-                    $(errorDiv + ", " + formDiv).removeClass(hiddenClass);
-                    $(warningDiv).addClass(hiddenClass);
+                    if(bindMessages(true, "errorList")){
+                        $(errorDiv).removeClass(hiddenClass);
+                    }
+                    else{
+                        $(warningDiv).removeClass(hiddenClass);
+                    }
+
+                    if(bindMessages(false, "warningList")){
+                        $(warningDiv).removeClass(hiddenClass);
+                    }
+                    else{
+                        $(warningDiv).addClass(hiddenClass);
+                    }
                 }
                 else
                 {
                     if(getErrorCount(false) > 0) {
-                        bindMessages(false, "warningList");
+                        bindMessages(false, "warningCommentList");
                     }
 
                     //we can go to the warningDiv
-                    $(errorDiv + ", " + formDiv).addClass(hiddenClass);
-                    $(warningDiv).removeClass(hiddenClass);
+                    $(errorDiv  + ", " + warningDiv + ", " + formDiv).addClass(hiddenClass);
+                    $(warningCommentDiv).removeClass(hiddenClass);
                 }
 
                 higlightFields();
             }
             else{
-                $(formDiv + ", " + warningDiv).addClass(hiddenClass);
+                $(errorDiv  + ", " + warningDiv + ", " + formDiv).addClass(hiddenClass);
                 $(successDiv).removeClass(hiddenClass);
             }
             break;
         case 2 :
 
-            $(formDiv + ", " + warningDiv).addClass(hiddenClass);
+            $(errorDiv  + ", " + warningDiv + ", " + formDiv + ", " + warningCommentDiv).addClass(hiddenClass);
             $(successDiv).removeClass(hiddenClass);
 
             break;
@@ -101,6 +116,8 @@ function bindMessages(isExceptions, listId) {
         li.appendChild(document.createTextNode(messages[i].message));
         ul.appendChild(li);
     }
+
+    return messages.length > 0;
 }
 
 
