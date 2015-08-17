@@ -32,7 +32,7 @@ function click(navValue) {
         case 0 :
 
             $(formDiv).removeClass(hiddenClass);
-            $(warningDiv).addClass(hiddenClass);
+            $(warningCommentDiv).addClass(hiddenClass);
 
             break;
         case 1 :
